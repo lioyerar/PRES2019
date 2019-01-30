@@ -14,7 +14,7 @@ import tweepy
 ACCESS_TOKEN = ''
 ACCESS_SECRET = ''
 CONSUMER_KEY = ''
-CONSUMER_SECRET = 'jI8DrTIWfrwyVmnQvJk73zXWcw0iMlX7YsfW8vaSo3b9aeZ6zM'
+CONSUMER_SECRET = ''
 
 # Setup tweepy to authenticate with Twitter credentials:
 
