@@ -10,9 +10,10 @@ except ImportError:
 import tweepy
 
 # Variables that contains the user credentials to access Twitter API
-ACCESS_TOKEN = '1088388174714490880-A1FfI5duvGg6i7AHDiXhPFkTchNrsw'
-ACCESS_SECRET = '2ncG828KNQcrYKjj1jrPrccppQkdN0aiPMWMWjgv1Yd7S'
-CONSUMER_KEY = 'WzdaORo1bxNNjrRFOKhItWAKH'
+# put your tokens
+ACCESS_TOKEN = ''
+ACCESS_SECRET = ''
+CONSUMER_KEY = ''
 CONSUMER_SECRET = 'jI8DrTIWfrwyVmnQvJk73zXWcw0iMlX7YsfW8vaSo3b9aeZ6zM'
 
 # Setup tweepy to authenticate with Twitter credentials:
@@ -35,7 +36,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, 
 
 #for status in tweepy.Cursor(api.home_timeline).items(200):
 #	print(status._json)
-    
+
 
 
 #---------------------------------------------------------------------------------------------------------------------
