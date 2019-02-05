@@ -54,12 +54,6 @@ while(next_cursor_id!=0):
 	list_of_followers.extend(current_followers)
 	next_cursor_id = current_cursor.iterator.next_cursor
 
-# Get a particular user's timeline (up to 200 of his/her most recent tweets)
-status_cursor = tweepy.Cursor(api.user_timeline, screen_name="billybob", count=200,tweet_mode='extended')
-status_list = status_cursor.iterator.next()
-
-#user = api.get_user(list_of_followers[0])
-#print(user.timeline())
 dic['followers'] = list_of_followers
 outFile = open(sys.argv[1]+'Followers.txt','w')
 json.dump(dic,outFile,indent=4)
