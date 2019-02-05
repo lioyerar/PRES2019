@@ -27,6 +27,7 @@ def getFollowers(fileContent):
     retweets = json.loads(fileContent)
 
     retweet_id = retweets[0]['retweeted_status']['id']
+    outFile = open('../samples/'+str(retweet_id)+'/followers.txt','w')
 
     #this variable contains the output file contains
     output=[]
@@ -65,7 +66,6 @@ def getFollowers(fileContent):
         print('sleep 1 min ')
         sleep(60)
 
-    outFile = open('../samples/'+str(retweeted_id)+'/followers.txt','w')
     json.dump(output,outFile,indent=4)
     outFile.close()
     print("a file is generated in sample/"+str(retweeted_id)+'/ folder')
