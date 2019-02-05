@@ -52,7 +52,7 @@ def getFollowers(fileContent):
                 continue
             else :
                 print e
-
+                continue
 
         while(next_cursor_id!=0):
             current_cursor = tweepy.Cursor(api.followers_ids, user_id=retweet['id'], count=5000,cursor=next_cursor_id)
@@ -65,9 +65,10 @@ def getFollowers(fileContent):
         print('sleep 1 min ')
         sleep(60)
 
-    outFile = open('../samples'+str(retweeted_id)+'followers.txt','w')
+    outFile = open('../samples/'+str(retweeted_id)+'/followers.txt','w')
     json.dump(output,outFile,indent=4)
     outFile.close()
+    print("a file is generated in sample/"+str(retweeted_id)+'/ folder')
 
 
 
