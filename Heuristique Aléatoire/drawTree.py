@@ -78,10 +78,16 @@ def drawWithoutRender(arbre, name, noms): #prend en arguments un arbre, name : l
         nstyle = NodeStyle()
         if node.is_leaf():
             nstyle["size"] = 15
-            nstyle["fgcolor"] = "red"
+            nstyle["fgcolor"] = "#ff0000"
+            nstyle["vt_line_type"] = 2
+            nstyle["hz_line_type"] = 1
+            nstyle["vt_line_color"] = "#008000"
+            nstyle["hz_line_color"] = "#008000"
         else:
             nstyle["size"] = 30
-            nstyle["fgcolor"] = "blue"
+            nstyle["fgcolor"] = "#808000"
+            nstyle["vt_line_color"] = "#800000"
+            nstyle["hz_line_color"] = "#800000"
         node.set_style(nstyle)
     ts = TreeStyle()
     ts.show_leaf_name = False
@@ -90,5 +96,5 @@ def drawWithoutRender(arbre, name, noms): #prend en arguments un arbre, name : l
     ts.arc_start = 180
     ts.arc_span = 180
     print("Création d'un rendu dans : Arbre Diffusion "+name+" ...") #On produit un fichier .png représentant l'arbre
-    A.render(name+".png", w=5000, dpi=1000, tree_style=ts)
+    A.render(name+".png", w=8000, dpi=1000, tree_style=ts)
     return A
