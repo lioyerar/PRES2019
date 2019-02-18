@@ -102,4 +102,6 @@ if __name__== '__main__':
         os.mkdir(path)
         print(str(len(data))+" rendus en attente :")
         for i in range(len(arbre)): #On produit un rendu pour tout les tweets
-            drawTree.drawWithoutRender(arbre[i],path+"Arbre Diffusion "+str(i+1),data2[i][1])
+            print("("+str(i+1)+"/"+str(len(data))+")")
+            tree = drawTree.drawNames(arbre[i],path+"Arbre Diffusion "+str(i+1),data2[i][1])
+        #drawTree.show(tree)
