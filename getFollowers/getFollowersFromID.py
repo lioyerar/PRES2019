@@ -43,7 +43,7 @@ dic = {}
 list_of_followers = []
 dic['user_id'] = int(sys.argv[1])
 
-current_cursor = tweepy.Cursor(api.followers_ids,user_id=int(sys.argv[1]) , count=5000)
+current_cursor = tweepy.Cursor(api.followers_ids,user_id=int(sys.argv[1]),count=5000)
 current_followers = current_cursor.iterator.next()
 list_of_followers.extend(current_followers)
 next_cursor_id = current_cursor.iterator.next_cursor
