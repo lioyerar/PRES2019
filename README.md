@@ -1,2 +1,4 @@
 # PRES2019
-Tweeter
+Etude de la propagation d'un tweet à l'aide d'arbres de diffusion.
+
+Redouane Bouras, Hugo Magnaudet, Loïc Sang.
